@@ -2,12 +2,15 @@
 
 namespace DemoApi.Controllers
 {
-    public class HomeController : Controller
+    [ApiController]
+    [Route("[controller]")]
+
+    public class HomeController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Index()
+        [HttpGet(Name = "home")]
+        public string Get()
         {
-            return View();
+            return "Hello, World!";
         }
     }
 }
