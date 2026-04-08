@@ -10,7 +10,8 @@ namespace DemoApi.Controllers
         [HttpGet(Name = "home")]
         public string Get()
         {
-            return "Hello, World!";
+            throw new Exception("Had no time to test :D ");
+            return "Hello, Malaga!";
         }
     }
 }
